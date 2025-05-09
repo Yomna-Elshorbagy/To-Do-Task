@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="icon" href="./img/to-do-list-svgrepo-com.svg" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container bg-white rounded shadow">
+      <div class="title my-5">
+        <h1 class="text-primary text-center p-5">📝 My-To-Do</h1>
+      </div>
+
+      <form class="input-group row m-1 p-3">
+        <div id="taskForm col-10  mx-auto ">
+          <div class="row">
+            <div class="col mb-5">
+              <input
+                type="text"
+                id="toDoInput"
+                class="form-control form-control-lg border-1 bg-transparent shadow"
+                placeholder="Add My Note ..."
+              />
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-success" id="addNoteBtn">
+                <span class="bg-warning rounded">➕</span> Add New Note
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="row mx-1 px-5 pb-3">
+        <div class="col mx-auto">
+          <ul id="taskList" class="list-group"></ul>
+        </div>
+      </div>
+    </div>
+    <!-- ========= script js============= -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
