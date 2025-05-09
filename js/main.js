@@ -15,8 +15,24 @@ addNoteBtn.addEventListener("click", (event) => {
   updateUi();
 });
 
+window.addEventListener("DOMContentLoaded", addToLocalStorage());
+function addToLocalStorage() {
+  const saveTasks = localStorage.getItem("tasks");
+  if (saveTasks) {
+    tasks = JSON.parse(saveTasks);
+    if (tasks.length > 0) {
+      const allIds = tasks.map((task) => task._id);
+      const highestId = Math.max(...allIds);
+      counter = highestId + 1;
+    } else {
+      counter = 0;
+    }
+    updateUi();
+  }
+}
+
 function updateUi() {
-  console.log("Updating UI with tasks:", tasks); // Add this
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 
   taskList.innerHTML = tasks
     .map(
