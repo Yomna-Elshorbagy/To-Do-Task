@@ -10,8 +10,17 @@
   </head>
   <body>
     <div class="container bg-white rounded shadow">
-      <div class="title my-5">
+      <div class="title my-5 d-flex flex-wrap align-items-center justify-content-between gap-3">
         <h1 class="text-primary text-center p-5">📝 My-To-Do</h1>
+        <div class="flex-grow-1 d-flex justify-content-end">
+          <input
+          type="text"
+          id="toSearch"
+          class="form-control form-control-sm border-1 bg-transparent shadow w-100 w-md-50"
+          placeholder="Search ..."
+          style="max-width: 300px;"
+        />
+      </div>
       </div>
 
       <form class="input-group row m-1 p-3">
